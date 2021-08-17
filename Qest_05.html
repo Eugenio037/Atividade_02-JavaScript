@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão_05 da LISTA 02</title>
+</head>
+<body>
+    <h1>Determina os Ímpares Consecutivos</h1>
+    <script>
+        let n, i, impar;
+
+        let m = parseInt(prompt("Digite um número: "));
+
+        impar = 1;
+
+        for(n = 1; n <= m; n++){
+           console.log("%d*%d*%d = %d", n, n, n, impar);
+            for(i = 1; i < n; i++)
+                console.log("+%d", impar + 2 * i);
+    	        impar = impar + 2 * n;  
+                
+            console.log("========================"); 
+        }
+    </script>
+</body>
+</html>

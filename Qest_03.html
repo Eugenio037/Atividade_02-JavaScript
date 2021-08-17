@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão_03 da LISTA 02</title>
+</head>
+<body>
+    <h1>Determinar Todos os Pares de Números Naturais</h1>
+    <script>
+        let x, y, valor, xmax, ymax, valormax = 0;  
+
+        let n = parseInt(prompt("Digite o valor de N: "));
+        console.log("N é : %d", n);
+
+        let m = parseInt(prompt("Digite o valor de M: "));
+        console.log("M é : %d", m);
+
+        xmax = ymax = 0;
+        
+        for(x = 0; x <= n; x++){
+            for(y = 0; y <= m; y++){
+                valor = x*y - x*x + y;
+        	    if(valor > valormax){
+                    valormax = valor;
+                    xmax = x;
+                    ymax = y;
+	    	    }
+		    }  
+        }
+  
+  	    console.log("Valor maximo da funcao = %d é com x = %d e y = %d\n", valormax, xmax, ymax);
+    </script>
+</body>
+</html>

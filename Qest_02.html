@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão_02 da LISTA 02</title>
+</head>
+<body>
+    <h1>Comprimento da Hipotenusa de um Triângulo Retângulo com Catetos Inteiros</h1>
+    <script>
+        let ver = 1, fal = 0, cat1, cat2, hipo, aux;
+
+        let n = parseInt(prompt("Digite um numero: "));
+        console.log("Comprimento maximo da Hipotenusa : %d", n);
+
+        for(hipo = 1; hipo <= n; hipo++) {
+            aux = fal;
+        for(cat1 = 1; cat1 < hipo && !aux; cat1++){
+            cat2 = cat1; 
+            while(cat1*cat1 + cat2*cat2 < hipo*hipo)
+		        cat2++;
+                if(cat1*cat1 + cat2*cat2 == hipo*hipo){
+		           console.log("hipotenusa = %d, catetos %d e %d\n", hipo, cat1, cat2);
+                   aux = ver;
+                }
+            }
+        }
+
+    </script>   
+</body>
+</html>

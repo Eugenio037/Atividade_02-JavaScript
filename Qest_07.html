@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão_07 da LISTA 02</title>
+</head>
+<body>
+    <h1>Determinar o Divisor Máximo Comum a Todos Números</h1>
+    <script>
+        let i, novo_mdc, divisor;
+
+        console.log("Determino mdc de n (numero > 0) numeros positivos.\n");
+
+        let n = parseInt(prompt("Digite um número de elementos da sequência: "));
+
+        let mdc = parseInt(prompt("Entre com o 1o. numero da sequência: "));
+        console.log("%d", mdc);
+       
+        i = 1;
+        while(i < n){
+            let numero = parseInt(prompt("Entre com o 2o. numero da sequência: ", i+1));
+            console.log("%d", numero);
+            i = i + 1;
+      
+            divisor = 1;
+            while(divisor <= mdc && divisor <= numero){
+                if(mdc % divisor == 0 && numero % divisor == 0){
+                    novo_mdc = divisor;                
+        	    }
+                divisor = divisor + 1;
+            }
+            mdc = novo_mdc;
+           
+        }
+        console.log("MDC = %d", mdc);
+
+    </script>
+</body>
+</html>

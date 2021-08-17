@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão_04 da LISTA 02</title>
+</head>
+<body>
+    <h1>Calcular a Soma dos Números Primos</h1>
+    <script>
+        let i, j, soma_primo = 2, quant_div = 0;
+
+        let n = parseInt(prompt("Digite um número: "));
+
+        for(i = 1; i <= n; i += 2){
+            quant_div = 0;
+            for(j = 1; j <= i; j++){
+                if(i % j == 0){
+            	    quant_div++; // QUANT_DIV -> QUANTIDADE DE DIVISOR
+                }
+            }
+            if(quant_div == 2) {
+                soma_primo += i;    //SOMA_PRIMO -> SOMA OS NÚMEROS PRIMOS
+            }
+        }
+    
+        console.log("A soma dos numeros primos eh: %d", soma_primo);
+
+    </script>
+</body>
+</html>
